@@ -10,8 +10,8 @@
 #import "PrettyKit.h"
 
 
-#define start_color [UIColor colorWithHex:0xEEEEEE]
-#define end_color [UIColor colorWithHex:0xDEDEDE]
+#define start_color [UIColor pretty_colorWithHex:0xEEEEEE]
+#define end_color [UIColor pretty_colorWithHex:0xDEDEDE]
 
 @implementation PlainExample
 
@@ -36,10 +36,10 @@
 - (void) customizeNavBar {
     PrettyNavigationBar *navBar = (PrettyNavigationBar *)self.navigationController.navigationBar;
     
-    navBar.topLineColor = [UIColor colorWithHex:0xFF1000];
-    navBar.gradientStartColor = [UIColor colorWithHex:0xDD0000];
-    navBar.gradientEndColor = [UIColor colorWithHex:0xAA0000];    
-    navBar.bottomLineColor = [UIColor colorWithHex:0x990000];   
+    navBar.topLineColor = [UIColor pretty_colorWithHex:0xFF1000];
+    navBar.gradientStartColor = [UIColor pretty_colorWithHex:0xDD0000];
+    navBar.gradientEndColor = [UIColor pretty_colorWithHex:0xAA0000];
+    navBar.bottomLineColor = [UIColor pretty_colorWithHex:0x990000];
     navBar.tintColor = navBar.gradientEndColor;
     navBar.roundedCornerRadius = 8;
 }
@@ -63,7 +63,7 @@
 
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:nil action:nil] autorelease];
 
-    [self.tableView dropShadows];
+    [self.tableView pretty_dropShadows];
     [self customizeNavBar];
 }
 

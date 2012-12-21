@@ -78,6 +78,6 @@ typedef enum {
  
  Shadows will be included __only__ if the tableView's style is plain.
  */
-- (void) dropShadows;
+- (void) pretty_dropShadows;
 
 @end

@@ -38,11 +38,11 @@
 
 #define default_radius          10
 
-#define default_border_color                    [UIColor colorWithHex:0xBCBCBC]
-#define default_separator_color                 [UIColor colorWithHex:0xCDCDCD] 
+#define default_border_color                    [UIColor pretty_colorWithHex:0xBCBCBC]
+#define default_separator_color                 [UIColor pretty_colorWithHex:0xCDCDCD] 
 
-#define default_selection_gradient_start_color  [UIColor colorWithHex:0x0089F9]
-#define default_selection_gradient_end_color    [UIColor colorWithHex:0x0054EA]
+#define default_selection_gradient_start_color  [UIColor pretty_colorWithHex:0x0089F9]
+#define default_selection_gradient_end_color    [UIColor pretty_colorWithHex:0x0054EA]
 
 
 typedef enum {

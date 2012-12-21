@@ -30,11 +30,11 @@
 @synthesize shadowOpacity, gradientEndColor, gradientStartColor, topLineColor, bottomLineColor;
 
 #define default_shadow_opacity 0.5
-#define default_gradient_end_color      [UIColor colorWithHex:0x297CB7]
-#define default_gradient_start_color    [UIColor colorWithHex:0x53A4DE]
-#define default_top_line_color          [UIColor colorWithHex:0x4F94C4]
-#define default_bottom_line_color       [UIColor colorWithHex:0x186399]
-#define default_tint_color              [UIColor colorWithHex:0x3D89BF]
+#define default_gradient_end_color      [UIColor pretty_colorWithHex:0x297CB7]
+#define default_gradient_start_color    [UIColor pretty_colorWithHex:0x53A4DE]
+#define default_top_line_color          [UIColor pretty_colorWithHex:0x4F94C4]
+#define default_bottom_line_color       [UIColor pretty_colorWithHex:0x186399]
+#define default_tint_color              [UIColor pretty_colorWithHex:0x3D89BF]
 
 - (void)dealloc {
     self.gradientStartColor = nil;
@@ -95,7 +95,7 @@
 - (void) drawRect:(CGRect)rect {
     [super drawRect:rect];
     
-    [self dropShadowWithOpacity:self.shadowOpacity];
+    [self pretty_dropShadowWithOpacity:self.shadowOpacity];
     [PrettyDrawing drawGradient:rect fromColor:self.gradientStartColor toColor:self.gradientEndColor];
     [self drawTopLine:rect];        
     [self drawBottomLine:rect];

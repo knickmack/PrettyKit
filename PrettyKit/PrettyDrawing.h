@@ -77,7 +77,7 @@ typedef enum {
  
  @warning This method uses the UILayer shadow properties.
  */
-- (void) dropShadowWithOpacity:(float)opacity;
+- (void) pretty_dropShadowWithOpacity:(float)opacity;
 
 @end
 
@@ -90,6 +90,6 @@ typedef enum {
  @param hex A color in hexadecimal notation: `0xCCCCCC`, `0xF7F7F7`, etc.
  
  @return A new autoreleased UIColor instance. */
-+ (UIColor *) colorWithHex:(int)hex;
++ (UIColor *) pretty_colorWithHex:(int)hex;
 
 @end

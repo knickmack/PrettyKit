@@ -118,7 +118,7 @@
 
 @implementation UIView (PrettyKit)
 
-- (void) dropShadowWithOpacity:(float)opacity {
+- (void) pretty_dropShadowWithOpacity:(float)opacity {
     self.layer.masksToBounds = NO;
     self.layer.shadowOffset = CGSizeMake(0, 0);
     self.layer.shadowOpacity = opacity;
@@ -131,7 +131,7 @@
 @implementation UIColor (PrettyKit)
 
 // http://stackoverflow.com/questions/1560081/how-can-i-create-a-uicolor-from-a-hex-string
-+ (UIColor *) colorWithHex:(int)hex {
++ (UIColor *) pretty_colorWithHex:(int)hex {
     return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0
                            green:((float)((hex & 0xFF00) >> 8))/255.0 
                             blue:((float)(hex & 0xFF))/255.0 alpha:1.0];
