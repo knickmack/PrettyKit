@@ -72,6 +72,12 @@ typedef enum {
 /** This category adds a set of methods to UIView class. */
 @interface UIView (PrettyKit)
 
+/** Drops a shadow with the given opacity.
+ 
+ @warning This method uses the UILayer shadow properties.
+ @warning This method is deprecated in favor of `pretty_dropShadowWithOpacity:`.
+ */
+- (void) dropShadowWithOpacity:(float)opacity __attribute__((deprecated));
 
 /** Drops a shadow with the given opacity.
  
@@ -84,6 +90,14 @@ typedef enum {
 
 /** This category adds a set of methods to UIColor class. */
 @interface UIColor (PrettyKit)
+
+/** Returns an autoreleased UIColor instance with the hexadecimal color.
+ 
+ @param hex A color in hexadecimal notation: `0xCCCCCC`, `0xF7F7F7`, etc.
+ @warning This method is deprecated in favor of `pretty_colorWithHex:`.
+ 
+ @return A new autoreleased UIColor instance. */
++ (UIColor *) colorWithHex:(int)hex __attribute__((deprecated));
 
 /** Returns an autoreleased UIColor instance with the hexadecimal color.
  

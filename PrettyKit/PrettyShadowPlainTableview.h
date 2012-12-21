@@ -74,6 +74,16 @@ typedef enum {
 
 /** Configures automatically the receiver tableView by dropping a shadow in both
  header and footer. It will also change the tableView's `contentInset` according
+ to the shadows' height.
+ 
+ Shadows will be included __only__ if the tableView's style is plain.
+ 
+ @warning This method is deprecated in favor of `pretty_dropShadows`.
+ */
+- (void) dropShadows __attribute__((deprecated));
+
+/** Configures automatically the receiver tableView by dropping a shadow in both
+ header and footer. It will also change the tableView's `contentInset` according
  to the shadows' height. 
  
  Shadows will be included __only__ if the tableView's style is plain.
